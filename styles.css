@@ -74,7 +74,8 @@ nav .logo-container {
   width: 120px;
   height: auto;
   position: absolute;
-  top: 450px;
+  top: calc(50vh - 100px);
+  /* Calcula el valor de 'top' con respecto a la mitad de la ventana */
   transform: rotate(90deg);
 }
 nav .logo-container svg.header-sidebar-logo {
@@ -125,9 +126,6 @@ nav h1 .nav-line {
 nav h1 a:nth-of-type(2) {
   color: red;
 }
-nav #button1 {
-  border: 1px solid red;
-}
 main {
   position: relative;
 }
@@ -160,9 +158,9 @@ main .linea {
 }
 main .text1 {
   position: absolute;
-  top: 880px;
+  top: calc(890px - 10px);
   right: 60px;
-  width: 27%;
+  width: calc(27% - 40px);
   padding: 20px;
   line-height: 1.6;
   font-weight: bold;
@@ -176,7 +174,8 @@ main .text1 h1 {
 }
 main .text1 h1:last-child {
   position: absolute;
-  top: 150px;
+  top: calc(200px - 30px);
+  /* Ajusta el top considerando el padding */
   font-family: "calluna", Georgia, serif;
   font-size: 1.1rem;
   font-weight: normal;
@@ -216,7 +215,7 @@ main .button-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 100vh;
+  margin-top: calc(100vh - 40px);
   margin-left: 100px;
   width: calc(100% - 140px);
   gap: 40px;
@@ -316,21 +315,23 @@ main .cultures-info p {
   margin: 20px 200px 0px 40%;
 }
 main .image-gallery {
-  width: 100%;
-  margin-left: 100px;
+  width: calc(100% - 200px);
+  /* Ajusta el ancho, restando el margen izquierdo */
+  margin-left: 150px;
   overflow-x: auto;
   display: flex;
   justify-content: flex-start;
 }
-main .image-gallery .images {
+main .images {
   display: flex;
   gap: 10px;
 }
-main .image-gallery .image-item {
-  min-width: 33.33%;
+main .image-item {
+  min-width: calc(33.33% - 10px);
+  /* Ajusta el ancho considerando el gap entre los items */
   scroll-snap-align: start;
 }
-main .image-gallery .image-item img {
+main .image-item img {
   width: 100%;
   height: auto;
 }
@@ -350,11 +351,11 @@ main .releas {
 main .homebooks {
   margin: 50px 0 0 150px;
   display: flex;
-  width: 90%;
+  width: calc(100% - 150px);
 }
 main .homebooks .homebooks-hijo {
   display: flex;
-  width: 50%;
+  width: calc(50% - 10px);
 }
 main .homebooks .homebooks-hijo .homebooks-img {
   width: calc((89.999vw - 220px) / 6);
@@ -367,7 +368,7 @@ main .homebooks .homebooks-hijo .homebooks-img img {
 main .homebooks .homebooks-hijo .homebooks-nieto {
   display: flex;
   flex-direction: column;
-  width: 33.33334%;
+  width: calc(33.33334% - 40px);
   height: 100%;
   justify-content: flex-start;
   margin-right: 20px;
@@ -419,6 +420,48 @@ main .homebooks .homebooks-hijo .homebooks-nieto .ratings .porcentaje100::before
   width: 100%;
   height: 100%;
   background-color: red;
+}
+main #button2 {
+  margin-left: 150px;
+  margin-right: 500px;
+  margin-top: 30px;
+  max-width: none;
+  width: calc(100% - 200px);
+  box-sizing: border-box;
+}
+main .trailer {
+  margin-left: 150px;
+  width: calc(100% - 200px);
+  line-height: 0.85em;
+  font-size: calc((89.999vw - 220px) / 6 * 0.9);
+}
+main .video {
+  position: relative;
+  width: 80%;
+  /* Cambiamos para que ocupe el 80% */
+  margin: 20px auto;
+  border: 1px solid white;
+}
+main .video::before {
+  content: '';
+  display: block;
+  padding-bottom: 56.25%;
+  /* Relación de aspecto 16:9 */
+}
+main .video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+main #button4 {
+  margin-left: 150px;
+  margin-right: 500px;
+  margin-top: 30px;
+  max-width: none;
+  width: calc(100% - 200px);
+  box-sizing: border-box;
 }
 footer {
   background-color: #000;

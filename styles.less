@@ -6,7 +6,6 @@
 
 html {
     overflow-x: hidden;
-    
 }
 
 body {
@@ -91,8 +90,9 @@ nav {
         width: 120px;
         height: auto;
         position: absolute;
-        top: 450px;
+        top: calc(50vh - 100px); /* Calcula el valor de 'top' con respecto a la mitad de la ventana */
         transform: rotate(90deg);
+
     
         svg.header-sidebar-logo {
             width: 100%;
@@ -152,9 +152,6 @@ nav {
         }
     }
     
-    #button1{
-        border: 1px solid red;
-    }
 
 }
 
@@ -182,6 +179,7 @@ main {
         height: auto;
         display: block;
     }
+    
     .linea{
         position: absolute;
         top: 1000px;
@@ -193,16 +191,15 @@ main {
 
     .text1 {
         position: absolute;
-        top: 880px;
+        top: calc(890px - 10px);
         right: 60px;
-        width: 27%;
+        width: calc(27% - 40px);
         padding: 20px; 
         line-height: 1.6;
         font-weight: bold;
         color: white;
         letter-spacing: 2px;
         font-size: 18px;
-        line-height: 1em;
         line-height: 1em;
     }
     
@@ -212,13 +209,14 @@ main {
     
     .text1 h1:last-child {
         position: absolute;
-        top: 150px;
+        top: calc(200px - 30px); /* Ajusta el top considerando el padding */
         font-family: "calluna", Georgia, serif;
         font-size: 1.1rem; 
         font-weight: normal;
         color: #bcbcbc;
         line-height: 28px;
     }
+    
 
     .homewhatisdegenesis-triangle {
         position: absolute;
@@ -252,14 +250,13 @@ main {
             stroke-width: 1px;
         }
         
-        
     }
 
     .button-container {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin-top: 100vh;
+        margin-top: calc(100vh - 40px);
         margin-left: 100px;
         width: calc(100% - 140px); 
         gap: 40px; 
@@ -376,27 +373,28 @@ main {
     }
 
     .image-gallery {
-        width: 100%; 
-        margin-left: 100px;
+        width: calc(100% - 200px); /* Ajusta el ancho, restando el margen izquierdo */
+        margin-left: 150px;
         overflow-x: auto; 
         display: flex; 
         justify-content: flex-start; 
-    
-        .images {
-            display: flex;
-            gap: 10px;
-        }
-    
-        .image-item {
-            min-width: 33.33%;
-            scroll-snap-align: start; 
-        }
-    
-        .image-item img {
-            width: 100%;  
-            height: auto; 
-        }
     }
+    
+    .images {
+        display: flex;
+        gap: 10px;
+    }
+    
+    .image-item {
+        min-width: calc(33.33% - 10px); /* Ajusta el ancho considerando el gap entre los items */
+        scroll-snap-align: start; 
+    }
+    
+    .image-item img {
+        width: 100%;  
+        height: auto; 
+    }
+    
     
     #button1 {
         margin-left: 150px;
@@ -416,41 +414,41 @@ main {
     .homebooks {
         margin: 50px 0 0 150px;
         display: flex;
-        width: 90%;
-    
+        width: calc(100% - 150px); 
+        
         .homebooks-hijo {
             display: flex;
-            width: 50%;
-    
+            width: calc(50% - 10px); 
+        
             .homebooks-img {
-                width: calc((89.999vw - 220px) / 6);
+                width: calc((89.999vw - 220px) / 6); 
                 height: auto;
-    
+        
                 img {
                     max-width: 100%;
                     height: auto;
                 }
             }
-    
+        
             .homebooks-nieto {
                 display: flex;
                 flex-direction: column;
-                width: 33.33334%;
+                width: calc(33.33334% - 40px); 
                 height: 100%;
                 justify-content: flex-start;
                 margin-right: 20px;
                 margin-left: 20px;
-
-                p{
+    
+                p {
                     margin-top: 8%;
                 }
-    
+        
                 h1 {
                     text-transform: uppercase;
                     font-size: 25px;
                     margin-bottom: 10px;
                 }
-    
+        
                 #button3 {
                     display: flex;
                     max-width: none;
@@ -461,23 +459,24 @@ main {
                     justify-content: center;
                     align-items: center;
                 }
-    
+        
                 .ratings {
                     display: flex;
                     flex-direction: column;
                     width: 100%;
                     margin-bottom: 10px;
-    
+        
                     div {
                         width: 100%;
                         height: 5px;
                         background-color: grey;
                         margin-top: 10%;
-    
+        
                         &:first-of-type {
                             margin-top: 0;
                         }
                     }
+    
                     .porcentaje30::before {
                         content: '';
                         display: block;
@@ -485,6 +484,7 @@ main {
                         height: 100%;
                         background-color: red;
                     }
+    
                     .porcentaje100::before {
                         content: '';
                         display: block;
@@ -497,13 +497,53 @@ main {
         }
     }
     
+    #button2 {
+        margin-left: 150px;
+        margin-right: 500px;
+        margin-top: 30px;
+        max-width: none;
+        width: calc(100% - 200px);
+        box-sizing: border-box; 
+    }
+
+    .trailer {
+        margin-left: 150px;
+        width: calc(100% - 200px);
+        line-height: .85em;
+        font-size: calc((89.999vw - 220px) / 6 * 0.9);
+    }
+
+    .video {
+        position: relative;
+        width: 80%; /* Cambiamos para que ocupe el 80% */
+        margin: 20px auto;
+        border: 1px solid white;
     
+        &::before {
+            content: '';
+            display: block;
+            padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+        }
     
+        & iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
     
-    
-    
-    
-    
+        
+
+    #button4 {
+        margin-left: 150px;
+        margin-right: 500px;
+        margin-top: 30px;
+        max-width: none;
+        width: calc(100% - 200px);
+        box-sizing: border-box; 
+    }
 
 }
 
