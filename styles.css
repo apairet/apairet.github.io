@@ -1,0 +1,396 @@
+html {
+  overflow-x: hidden;
+}
+body {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+}
+body ::selection {
+  background-color: red;
+  color: grey;
+}
+header {
+  background-image: url("img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+header .container {
+  display: flex;
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  top: 525px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+header .container .cls-1 {
+  fill: white;
+}
+header .container .cls-2 {
+  fill: red;
+}
+header h1,
+header h2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  letter-spacing: 4px;
+  width: 100%;
+  text-align: center;
+}
+header h1 {
+  top: 710px;
+}
+header h2 {
+  top: 870px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  border-right: 1px solid grey;
+  height: 100%;
+  display: flex;
+  z-index: 1000;
+}
+nav div {
+  display: inline;
+}
+nav .logo-container {
+  width: 120px;
+  height: auto;
+  position: absolute;
+  top: 450px;
+  transform: rotate(90deg);
+}
+nav .logo-container svg.header-sidebar-logo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+nav .logo-container .cls-1 {
+  fill: #ffffff;
+}
+nav .logo-container .cls-2 {
+  fill: #ff0000;
+}
+nav img {
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid grey;
+}
+nav h1 {
+  position: absolute;
+  transform: rotate(90deg);
+  transform-origin: bottom left;
+  bottom: 260px;
+  left: 25px;
+  width: 230px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav h1 a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.5s;
+}
+nav h1 a:hover {
+  color: red;
+}
+nav h1 .nav-line {
+  height: 4vh;
+  width: 1px;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transform: rotate(90deg);
+}
+nav h1 a:nth-of-type(2) {
+  color: red;
+}
+nav #button1 {
+  border: 1px solid red;
+}
+main {
+  position: relative;
+}
+main .welcome {
+  padding-top: 50px;
+  text-align: center;
+  font-size: calc((89.999vw - 220px) / 6*1.015);
+  transform: translateX(50px);
+}
+main .triangle {
+  position: absolute;
+  top: 1000px;
+  left: 50%;
+  transform: translate(-50%, -50%) translateX(50px);
+}
+main .triangle img {
+  display: flex;
+  width: 350px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+main .linea {
+  position: absolute;
+  top: 1000px;
+  left: 100px;
+  background-color: #3e4144;
+  width: 100%;
+  height: 1px;
+}
+main .text1 {
+  position: absolute;
+  top: 880px;
+  right: 60px;
+  width: 27%;
+  padding: 20px;
+  line-height: 1.6;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 18px;
+  line-height: 1em;
+}
+main .text1 h1 {
+  margin: 0 0 20px 0;
+}
+main .text1 h1:last-child {
+  position: absolute;
+  top: 150px;
+  font-family: "calluna", Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: #bcbcbc;
+  line-height: 28px;
+}
+main .homewhatisdegenesis-triangle {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 1100px;
+  width: calc((89.999vw - 220px) / 6 * 2 + 7.8vw);
+  height: calc((89.999vw - 220px) / 6 * 2 + 7.8vw);
+  left: 50%;
+  transform: translate(-50%, -50%) translateX(50px);
+}
+main .homewhatisdegenesis-triangle svg {
+  width: 100%;
+  height: 100%;
+}
+main .homewhatisdegenesis-triangle .homewhatisdegenesis-triangle-outer,
+main .homewhatisdegenesis-triangle .homewhatisdegenesis-triangle-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+main .homewhatisdegenesis-triangle .homewhatisdegenesis-triangle-outer-path,
+main .homewhatisdegenesis-triangle .homewhatisdegenesis-triangle-inner-path {
+  fill: none;
+  stroke: white;
+  stroke-width: 1px;
+}
+main .button-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100vh;
+  margin-left: 100px;
+  width: calc(100% - 140px);
+  gap: 40px;
+  padding: 0 20px;
+}
+main .button {
+  flex: 1;
+  padding: 50px 10px;
+  color: white;
+  cursor: pointer;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(33% - 20px);
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s;
+}
+main .button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: red;
+  height: 0;
+  z-index: -1;
+  transition: height 0.3s;
+}
+main .button:hover {
+  color: white;
+}
+main .button:hover::before {
+  height: 100%;
+}
+main .rojo {
+  color: red;
+}
+main .text2 {
+  margin-left: 100px;
+}
+main .text2 p {
+  margin-top: 100px;
+  line-height: 1.2em;
+  margin-left: 3.8rem;
+}
+main .text2 p:nth-of-type(1) {
+  letter-spacing: 0.6em;
+  font-size: 20px;
+  font-family: "AvenirLTPro-Book", Helvetica, Arial, sans-serif;
+}
+main .text2 p:nth-of-type(2) {
+  font-family: "calluna", Georgia, serif;
+  margin-top: 0;
+  padding-top: 70px;
+  font-size: 3.8vw;
+  text-indent: 7rem;
+}
+main .cultures-info {
+  margin: 150px 50px 100px 150px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+main .cultures-info h1 {
+  font-size: 5vw;
+}
+main .cultures-info .left-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+main .cultures-info h2 {
+  font-size: 20px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  border-bottom: 2px solid #000;
+  margin-bottom: 10px;
+}
+main .cultures-info .linea2 {
+  height: 1px;
+  width: 100px;
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: darkslategray;
+}
+main .cultures-info p {
+  font-family: "calluna", Georgia, serif;
+  font-weight: 500;
+  color: grey;
+  text-indent: 1.6em;
+  line-height: 1.6em;
+  width: 30%;
+  margin: 20px 200px 0px 40%;
+}
+main .image-gallery {
+  width: 100%;
+  /* El contenedor ocupa todo el ancho disponible */
+  margin-left: 100px;
+  overflow-x: auto;
+  /* Habilita el desplazamiento horizontal solo para la galería */
+  display: flex;
+  /* Flex para que las imágenes estén alineadas horizontalmente */
+  justify-content: flex-start;
+  /* Alinea las imágenes al principio */
+}
+main .image-gallery .images {
+  display: flex;
+  /* Las imágenes están en fila */
+  gap: 10px;
+  /* Espacio entre las imágenes */
+}
+main .image-gallery .image-item {
+  min-width: 33.33%;
+  /* Cada imagen ocupa un tercio del ancho del contenedor visible */
+  scroll-snap-align: start;
+  /* Hace que se detenga en el inicio de cada imagen */
+}
+main .image-gallery .image-item img {
+  width: 100%;
+  /* Las imágenes ocupan todo el ancho de su contenedor */
+  height: auto;
+  /* Mantiene la relación de aspecto */
+}
+main #button1 {
+  margin-left: 150px;
+  margin-right: 500px;
+  margin-top: 30px;
+  max-width: none;
+  width: calc(100% - 200px);
+  /* Suma los márgenes izquierdo y derecho al width para que se ajuste */
+  box-sizing: border-box;
+  /* Esto asegura que los márgenes no afecten el tamaño total */
+}
+main .releas {
+  margin-left: 150px;
+  margin-top: 150px;
+  font-size: calc((89.999vw - 220px) / 6*0.9);
+}
+main .homebooks {
+  margin: 50px 0 0 100px ;
+  border-top: 1px solid grey;
+}
+footer {
+  background-color: #000;
+  /* Color de fondo */
+  color: white;
+  /* Color del texto */
+  padding: 20px;
+  /* Espaciado interno */
+  text-align: center;
+  /* Centra el texto */
+}
+footer .footer-logo img {
+  max-width: 150px;
+  /* Ajusta el tamaño del logo */
+}
+footer .footer-info,
+footer .footer-publisher,
+footer .footer-inquiries,
+footer .footer-copyright {
+  margin: 10px 0;
+  /* Espaciado entre secciones */
+}
+footer .footer a {
+  color: #fff;
+  /* Color de los enlaces */
+  text-decoration: none;
+  /* Sin subrayado */
+}
+footer .footer a:hover {
+  text-decoration: underline;
+  /* Subrayar al pasar el mouse */
+}
