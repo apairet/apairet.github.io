@@ -11,7 +11,7 @@ body ::selection {
   color: grey;
 }
 header {
-  background-image: url("img/background.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 80%, #000000 100%), url("img/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -317,32 +317,22 @@ main .cultures-info p {
 }
 main .image-gallery {
   width: 100%;
-  /* El contenedor ocupa todo el ancho disponible */
   margin-left: 100px;
   overflow-x: auto;
-  /* Habilita el desplazamiento horizontal solo para la galería */
   display: flex;
-  /* Flex para que las imágenes estén alineadas horizontalmente */
   justify-content: flex-start;
-  /* Alinea las imágenes al principio */
 }
 main .image-gallery .images {
   display: flex;
-  /* Las imágenes están en fila */
   gap: 10px;
-  /* Espacio entre las imágenes */
 }
 main .image-gallery .image-item {
   min-width: 33.33%;
-  /* Cada imagen ocupa un tercio del ancho del contenedor visible */
   scroll-snap-align: start;
-  /* Hace que se detenga en el inicio de cada imagen */
 }
 main .image-gallery .image-item img {
   width: 100%;
-  /* Las imágenes ocupan todo el ancho de su contenedor */
   height: auto;
-  /* Mantiene la relación de aspecto */
 }
 main #button1 {
   margin-left: 150px;
@@ -350,9 +340,7 @@ main #button1 {
   margin-top: 30px;
   max-width: none;
   width: calc(100% - 200px);
-  /* Suma los márgenes izquierdo y derecho al width para que se ajuste */
   box-sizing: border-box;
-  /* Esto asegura que los márgenes no afecten el tamaño total */
 }
 main .releas {
   margin-left: 150px;
@@ -360,37 +348,97 @@ main .releas {
   font-size: calc((89.999vw - 220px) / 6*0.9);
 }
 main .homebooks {
-  margin: 50px 0 0 100px ;
-  border-top: 1px solid grey;
+  margin: 50px 0 0 150px;
+  display: flex;
+  width: 90%;
+}
+main .homebooks .homebooks-hijo {
+  display: flex;
+  width: 50%;
+}
+main .homebooks .homebooks-hijo .homebooks-img {
+  width: calc((89.999vw - 220px) / 6);
+  height: auto;
+}
+main .homebooks .homebooks-hijo .homebooks-img img {
+  max-width: 100%;
+  height: auto;
+}
+main .homebooks .homebooks-hijo .homebooks-nieto {
+  display: flex;
+  flex-direction: column;
+  width: 33.33334%;
+  height: 100%;
+  justify-content: flex-start;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+main .homebooks .homebooks-hijo .homebooks-nieto p {
+  margin-top: 8%;
+}
+main .homebooks .homebooks-hijo .homebooks-nieto h1 {
+  text-transform: uppercase;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+main .homebooks .homebooks-hijo .homebooks-nieto #button3 {
+  display: flex;
+  max-width: none;
+  width: 100%;
+  height: 30px;
+  background-color: black;
+  border-left: black;
+  justify-content: center;
+  align-items: center;
+}
+main .homebooks .homebooks-hijo .homebooks-nieto .ratings {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+}
+main .homebooks .homebooks-hijo .homebooks-nieto .ratings div {
+  width: 100%;
+  height: 5px;
+  background-color: grey;
+  margin-top: 10%;
+}
+main .homebooks .homebooks-hijo .homebooks-nieto .ratings div:first-of-type {
+  margin-top: 0;
+}
+main .homebooks .homebooks-hijo .homebooks-nieto .ratings .porcentaje30::before {
+  content: '';
+  display: block;
+  width: 30%;
+  height: 100%;
+  background-color: red;
+}
+main .homebooks .homebooks-hijo .homebooks-nieto .ratings .porcentaje100::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: red;
 }
 footer {
   background-color: #000;
-  /* Color de fondo */
   color: white;
-  /* Color del texto */
   padding: 20px;
-  /* Espaciado interno */
   text-align: center;
-  /* Centra el texto */
 }
 footer .footer-logo img {
   max-width: 150px;
-  /* Ajusta el tamaño del logo */
 }
 footer .footer-info,
 footer .footer-publisher,
 footer .footer-inquiries,
 footer .footer-copyright {
   margin: 10px 0;
-  /* Espaciado entre secciones */
 }
 footer .footer a {
   color: #fff;
-  /* Color de los enlaces */
   text-decoration: none;
-  /* Sin subrayado */
 }
 footer .footer a:hover {
   text-decoration: underline;
-  /* Subrayar al pasar el mouse */
 }
