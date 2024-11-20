@@ -136,86 +136,53 @@ main .welcome {
   transform: translateX(50px);
 }
 main .triangle {
-  position: absolute;
-  top: 1000px;
-  left: 50%;
-  transform: translate(-50%, -50%) translateX(50px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 60%;
+  margin-left: 36%;
+  transform: translateX(100px);
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 main .triangle img {
-  display: flex;
-  width: 350px;
+  width: 300px;
   max-width: 100%;
   height: auto;
   display: block;
 }
-main .linea {
-  position: absolute;
-  top: 1000px;
-  left: 100px;
-  background-color: #3e4144;
-  width: 100%;
-  height: 1px;
-}
-main .text1 {
-  position: absolute;
-  top: calc(890px - 10px);
-  right: 60px;
-  width: calc(27% - 40px);
-  padding: 20px;
+main .triangle .text1 {
+  margin-left: 3vw;
+  margin-right: 3vw;
   line-height: 1.6;
   font-weight: bold;
   color: white;
   letter-spacing: 2px;
   font-size: 18px;
   line-height: 1em;
+  margin-top: 10%;
 }
-main .text1 h1 {
-  margin: 0 0 20px 0;
-}
-main .text1 h1:last-child {
-  position: absolute;
-  top: calc(200px - 30px);
-  /* Ajusta el top considerando el padding */
+main .triangle .text1 h1:last-child {
+  margin-top: 20%;
   font-family: "calluna", Georgia, serif;
   font-size: 1.1rem;
   font-weight: normal;
   color: #bcbcbc;
   line-height: 28px;
 }
-main .homewhatisdegenesis-triangle {
+main .linea {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 1100px;
-  width: calc((89.999vw - 220px) / 6 * 2 + 7.8vw);
-  height: calc((89.999vw - 220px) / 6 * 2 + 7.8vw);
-  left: 50%;
-  transform: translate(-50%, -50%) translateX(50px);
-}
-main .homewhatisdegenesis-triangle svg {
+  top: 800px;
+  left: 100px;
+  background-color: #3e4144;
   width: 100%;
-  height: 100%;
-}
-main .homewhatisdegenesis-triangle .homewhatisdegenesis-triangle-outer,
-main .homewhatisdegenesis-triangle .homewhatisdegenesis-triangle-inner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-main .homewhatisdegenesis-triangle .homewhatisdegenesis-triangle-outer-path,
-main .homewhatisdegenesis-triangle .homewhatisdegenesis-triangle-inner-path {
-  fill: none;
-  stroke: white;
-  stroke-width: 1px;
+  height: 1px;
 }
 main .button-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: calc(100vh - 40px);
   margin-left: 100px;
   width: calc(100% - 140px);
   gap: 40px;
@@ -374,23 +341,15 @@ main .homebooks .homebooks-hijo .homebooks-nieto {
   margin-right: 20px;
   margin-left: 20px;
 }
-main .homebooks .homebooks-hijo .homebooks-nieto p {
-  margin-top: 8%;
-}
 main .homebooks .homebooks-hijo .homebooks-nieto h1 {
   text-transform: uppercase;
   font-size: 25px;
   margin-bottom: 10px;
 }
-main .homebooks .homebooks-hijo .homebooks-nieto #button3 {
-  display: flex;
+main .homebooks .homebooks-hijo .homebooks-nieto div:last-child {
   max-width: none;
-  width: 100%;
-  height: 30px;
-  background-color: black;
-  border-left: black;
-  justify-content: center;
-  align-items: center;
+  width: 90%;
+  max-height: 10px;
 }
 main .homebooks .homebooks-hijo .homebooks-nieto .ratings {
   display: flex;
@@ -464,24 +423,12 @@ main #button4 {
   box-sizing: border-box;
 }
 footer {
-  background-color: #000;
-  color: white;
-  padding: 20px;
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  margin-left: 100px;
+  margin-bottom: 1000px;
 }
 footer .footer-logo img {
+  min-width: 100px;
   max-width: 150px;
-}
-footer .footer-info,
-footer .footer-publisher,
-footer .footer-inquiries,
-footer .footer-copyright {
-  margin: 10px 0;
-}
-footer .footer a {
-  color: #fff;
-  text-decoration: none;
-}
-footer .footer a:hover {
-  text-decoration: underline;
 }
