@@ -127,7 +127,7 @@ nav h1 a:nth-of-type(2) {
   color: red;
 }
 main {
-  position: relative;
+  border: 1px solid red;
 }
 main .welcome {
   padding-top: 50px;
@@ -173,7 +173,7 @@ main .triangle .text1 h1:last-child {
 }
 main .linea {
   position: absolute;
-  top: 800px;
+  margin-top: 23vw;
   left: 100px;
   background-color: #3e4144;
   width: 100%;
