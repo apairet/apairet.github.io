@@ -1,0 +1,172 @@
+@keyframes anim_planeta {
+
+    0%{
+    
+        transform: rotate(0deg);
+    
+    }
+    100%{
+
+        transform: rotate(-360deg);
+    
+    }
+    
+}
+
+@keyframes anim_stars {
+
+    0%{
+    
+        background-position-x: 100%;
+    
+    }
+    50%{
+
+        background-position-x: 0%;
+
+    }
+    100%{
+    
+        background-position-x: -100%;
+    
+    }
+    
+}
+
+@keyframes anim_cohet {
+    0% {
+        transform: translateX(150%) translateY(0%) rotate(-190deg) scale(75%);
+    }
+    12.5% {
+        transform: translateX(106%) translateY(63%) rotate(-145deg) scale(87.5%);
+    }
+    25% {
+        transform: translateX(0%) translateY(90%) rotate(-100deg) scale(100%);
+    }
+    37.5% {
+        transform: translateX(-106%) translateY(63%) rotate(-50deg) scale(87.5%);
+    }
+    50% {
+        transform: translateX(-150%) translateY(0%) rotate(0deg) scale(75%);
+    }
+    62.5% {
+        transform: translateX(-106%) translateY(-57%) rotate(50deg) scale(62.5%);
+    }
+    75% {
+        transform: translateX(0%) translateY(-80%) rotate(100deg) scale(50%);
+    }
+    87.5% {
+        transform: translateX(106%) translateY(-57%) rotate(145deg) scale(62.5%);
+    }
+    100% {
+        transform: translateX(150%) translateY(0%) rotate(190deg) scale(75%);
+    }
+}
+
+
+@keyframes anim_blur {
+
+    0%{
+
+        opacity: 100;
+
+    }
+    100%{
+
+        opacity: 0;
+
+    }
+    
+}
+
+html{
+    background-color: black;
+    body{
+
+        .blur{
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 9999;
+            position: absolute;
+
+            animation-name: anim_blur;
+            animation-duration: 0.1s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+        }
+
+        /*.stars{
+            .star{
+                &::after{
+                    content: '★';
+                    color: white;
+                    z-index: 99999999;
+                }
+            }
+        }*/
+
+        .fons{
+            background-image: url(./imatges/stars.png);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            
+            animation-name: anim_stars;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            background-repeat: repeat;
+        }
+
+        .stars{
+            content: ★;
+        }
+
+        main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            section{
+                height: 100vh;
+                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .planeta{
+                    width: 250px;
+                    height: 250px;
+                    background-image: url(./imatges/planet.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+
+                    animation-name: anim_planeta;
+                    animation-duration: 5s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear;
+                }
+
+                .cohet{
+                    width: 100px;
+                    height: 200px;
+                    background-image: url(./imatges/cohet.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    position: absolute;
+
+                    
+
+                    animation-name: anim_cohet;
+                    animation-duration: 5s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear;
+
+                }
+
+            }
+        }
+    }
+}
